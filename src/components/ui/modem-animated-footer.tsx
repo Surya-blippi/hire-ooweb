@@ -47,9 +47,9 @@ export const ModemFooter = ({
                             {/* Email Address */}
                             <a
                                 href="mailto:founder@hireoo.ai"
-                                className="text-muted-foreground hover:text-foreground transition-colors text-lg mb-4"
+                                className="text-muted-foreground hover:text-foreground transition-colors text-base sm:text-lg mb-4 text-center"
                             >
-                                founder@hireoo.ai
+                                Write to us at <span className="text-foreground font-medium">founder@hireoo.ai</span> - we respond within 24 hours
                             </a>
 
                             {socialLinks.length > 0 && (
