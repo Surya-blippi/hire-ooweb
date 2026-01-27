@@ -10,7 +10,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Hireo | Hire Top Indian Talent",
+  title: "Hireoo | Hire Top Indian Talent",
   description: "Connect with pre-vetted top Indian talent for your software engineering and marketing needs.",
 };
 
@@ -27,7 +27,7 @@ export default function RootLayout({
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
-          enableSystem
+          forcedTheme="dark"
           disableTransitionOnChange
         >
           {children}

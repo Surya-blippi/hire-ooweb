@@ -56,7 +56,7 @@ export function ComparisonSection() {
                         className="text-3xl md:text-5xl font-bold mb-4 tracking-tight text-foreground"
                     >
                         Why Smart Companies <br className="hidden md:block" />
-                        Choose <span className="text-indigo-500">Hireo</span>
+                        Choose <span className="text-indigo-500">Hireoo</span>
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -79,7 +79,7 @@ export function ComparisonSection() {
                         </div>
                         <div className="relative p-6 pb-8 text-center border-b border-border">
                             <div className="absolute inset-0 bg-indigo-500/5 dark:bg-indigo-500/10 rounded-t-2xl border-x border-t border-indigo-500/20 -z-10 translate-y-2"></div>
-                            <h3 className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">Hireo</h3>
+                            <h3 className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">Hireoo</h3>
                             <p className="text-xs text-indigo-500/80 font-medium mt-1">The Modern Standard</p>
                         </div>
                         <div className="p-6 pb-8 text-center border-b border-border opacity-50">
@@ -152,7 +152,7 @@ export function ComparisonSection() {
                                             <row.hireo.icon className="w-4 h-4 text-white" />
                                         </div>
                                         <div>
-                                            <div className="text-xs font-bold text-indigo-500 uppercase tracking-wider">Hireo</div>
+                                            <div className="text-xs font-bold text-indigo-500 uppercase tracking-wider">Hireoo</div>
                                             <div className="text-sm font-semibold text-foreground">{row.hireo.text}</div>
                                         </div>
                                     </div>
@@ -175,12 +175,7 @@ export function ComparisonSection() {
                         ))}
                     </div>
 
-                    <div className="mt-16 flex justify-center">
-                        <Button size="lg" className="rounded-full px-8 h-12 text-base font-semibold shadow-xl shadow-indigo-500/20">
-                            Experience the Difference
-                            <ArrowRight className="ml-2 w-4 h-4" />
-                        </Button>
-                    </div>
+
                 </div>
             </div>
         </section>

@@ -127,7 +127,7 @@ export function TalentGrid() {
                                             <div className="relative h-24 w-24 md:h-28 md:w-28 rounded-lg overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
                                                 <Image src={profile.image} alt={profile.name} fill className="object-cover" />
                                             </div>
-                                            <Button variant="outline" size="sm" className="w-full text-xs hidden md:flex items-center gap-1 border-zinc-700 text-zinc-400 hover:text-white hover:bg-zinc-800 hover:border-zinc-600">
+                                            <Button variant="outline" size="sm" disabled className="w-full text-xs hidden md:flex items-center gap-1 border-zinc-700 text-zinc-600 cursor-not-allowed">
                                                 Profile <ExternalLink className="h-3 w-3" />
                                             </Button>
                                         </div>
@@ -140,9 +140,9 @@ export function TalentGrid() {
                                                         {profile.role} <span className="mx-2 text-zinc-700">•</span> <span className="text-zinc-300">{profile.exp}</span>
                                                     </div>
                                                 </div>
-                                                <a href="#" className="hidden md:block text-zinc-600 hover:text-indigo-400 transition-colors">
+                                                <span className="hidden md:block text-zinc-800 cursor-not-allowed">
                                                     <Linkedin className="h-5 w-5" />
-                                                </a>
+                                                </span>
                                             </div>
 
                                             <div className="bg-zinc-950/50 rounded border border-zinc-800 p-3 grid grid-cols-2 gap-4 mb-4 text-xs text-zinc-400">
@@ -175,11 +175,7 @@ export function TalentGrid() {
                     </AnimatePresence>
                 </motion.div>
 
-                <div className="mt-16 text-center">
-                    <Button size="lg" className="bg-white text-black hover:bg-zinc-200 rounded-full px-10 h-12 text-base font-semibold transition-all">
-                        View All Talent
-                    </Button>
-                </div>
+
             </div>
         </section>
     );

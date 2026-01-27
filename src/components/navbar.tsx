@@ -32,30 +32,25 @@ export function Navbar() {
             >
                 <Link href="/" className="flex items-center gap-1 group">
                     <span className="text-xl font-bold tracking-tight text-foreground">
-                        hire<span className="text-muted-foreground group-hover:text-primary transition-colors">o.</span>
+                        hireoo<span className="text-muted-foreground group-hover:text-primary transition-colors">.</span>
                     </span>
                 </Link>
 
                 <div className="h-4 w-[1px] bg-border hidden md:block" />
 
-                <div className="hidden md:flex items-center gap-6 text-sm font-medium text-muted-foreground">
+                <div className="hidden md:flex items-center gap-6 text-sm font-medium text-muted-foreground/50 cursor-not-allowed">
                     {["Companies", "Talents", "Stories", "Pricing"].map((item) => (
-                        <Link key={item} href="#" className="hover:text-foreground transition-colors">
+                        <span key={item} className="cursor-not-allowed">
                             {item}
-                        </Link>
+                        </span>
                     ))}
                 </div>
 
                 <div className="flex items-center gap-3 pl-2">
-                    <div className="hidden md:block">
-                        <ThemeToggle />
-                    </div>
+                    {/* Theme Toggle Removed - Dark Mode Enforced */}
 
-                    <Link href="#" className="text-sm font-medium text-foreground hover:text-muted-foreground hidden md:block">
-                        Login
-                    </Link>
-                    <Button size="sm" className="rounded-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-5 h-9">
-                        Get Started
+                    <Button size="sm" disabled className="rounded-full bg-primary/50 text-white cursor-not-allowed font-semibold px-5 h-9">
+                        Launching Soon
                     </Button>
                 </div>
             </motion.nav>
