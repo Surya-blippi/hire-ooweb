@@ -39,7 +39,7 @@ import { ElegantShape } from "@/components/ui/elegant-shape";
 
 export function Hero() {
     return (
-        <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-black selection:bg-indigo-500/30">
+        <section className="relative min-h-screen flex items-center justify-center pt-32 md:pt-40 overflow-hidden bg-black selection:bg-indigo-500/30">
             {/* Elegant Geometric Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] blur-3xl" />
 
