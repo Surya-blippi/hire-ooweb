@@ -22,9 +22,9 @@ const logos = [
 
 export function CompanyLogos() {
   return (
-    <section className="py-20 bg-white overflow-hidden">
+    <section className="py-20 bg-black overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="text-center text-3xl md:text-5xl font-bold text-gray-900 mb-10 tracking-tight">
+        <h2 className="text-center text-3xl md:text-5xl font-bold text-white mb-10 tracking-tight">
           Companies we’ve helped hire
         </h2>
         <div className="relative w-full overflow-hidden mask-linear-gradient">
