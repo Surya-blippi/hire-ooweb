@@ -2,7 +2,7 @@
 
 import { Resend } from "resend";
 
-const resend = new Resend("re_DxPhEsA5_KcP5utAFMfYo4mMxBDf4zDGj");
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function sendHiringEmail(formData: FormData) {
     const name = formData.get("name") as string;
