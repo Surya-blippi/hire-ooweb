@@ -5,6 +5,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { SpotlightCard } from "@/components/ui/spotlight-card";
 import { ResumeUploader } from "@/components/resume-uploader";
+import { useState } from "react";
+import { HireModal } from "@/components/hire-modal";
 
 const heroProfiles = [
     {
@@ -35,11 +37,13 @@ const heroProfiles = [
 
 import { ElegantShape } from "@/components/ui/elegant-shape";
 
-// ... existing code ...
-
 export function Hero() {
+    const [isHireModalOpen, setIsHireModalOpen] = useState(false);
+
     return (
         <section className="relative min-h-screen flex items-center justify-center pt-32 md:pt-40 overflow-hidden bg-black selection:bg-indigo-500/30">
+            <HireModal isOpen={isHireModalOpen} onClose={() => setIsHireModalOpen(false)} />
+
             {/* Elegant Geometric Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] blur-3xl" />
 
@@ -117,7 +121,11 @@ export function Hero() {
                         transition={{ duration: 1, delay: 0.3 }}
                         className="flex flex-col sm:flex-row items-center justify-center gap-4"
                     >
-                        <Button size="lg" className="bg-white text-black hover:bg-white/90 rounded-full px-10 h-14 text-base font-semibold backdrop-blur-md transition-all">
+                        <Button
+                            size="lg"
+                            onClick={() => setIsHireModalOpen(true)}
+                            className="bg-white text-black hover:bg-white/90 rounded-full px-10 h-14 text-base font-semibold backdrop-blur-md transition-all"
+                        >
                             Hire a Talent
                         </Button>
                         <Button size="lg" className="bg-white/10 text-white border border-white/5 hover:bg-white/20 rounded-full px-10 h-14 text-base font-semibold backdrop-blur-md transition-all">

@@ -6,11 +6,13 @@ import { Button } from "@/components/ui/button";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { HireModal } from "@/components/hire-modal";
 
 export function Navbar() {
     const [visible, setVisible] = useState(true);
     const { scrollY } = useScroll();
     const [lastScrollY, setLastScrollY] = useState(0);
+    const [isHireModalOpen, setIsHireModalOpen] = useState(false);
 
     useMotionValueEvent(scrollY, "change", (latest) => {
         const direction = latest > lastScrollY ? "down" : "up";
@@ -24,6 +26,7 @@ export function Navbar() {
 
     return (
         <div className="fixed top-6 inset-x-0 z-50 flex justify-center pointer-events-none">
+            <HireModal isOpen={isHireModalOpen} onClose={() => setIsHireModalOpen(false)} />
             <motion.nav
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: visible ? 0 : -100, opacity: visible ? 1 : 0 }}
@@ -49,8 +52,12 @@ export function Navbar() {
                 <div className="flex items-center gap-3 pl-2">
                     {/* Theme Toggle Removed - Dark Mode Enforced */}
 
-                    <Button size="sm" disabled className="rounded-full bg-primary/50 text-white cursor-not-allowed font-semibold px-5 h-9">
-                        Launching Soon
+                    <Button
+                        size="sm"
+                        onClick={() => setIsHireModalOpen(true)}
+                        className="rounded-full bg-white text-black hover:bg-neutral-200 font-semibold px-5 h-9"
+                    >
+                        Hire a Talent
                     </Button>
                 </div>
             </motion.nav>

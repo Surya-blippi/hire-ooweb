@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google"; // Use Montserrat as per Uplers design
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { ToastProvider } from "@/hooks/use-toast";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -30,7 +31,9 @@ export default function RootLayout({
           forcedTheme="dark"
           disableTransitionOnChange
         >
-          {children}
+          <ToastProvider>
+            {children}
+          </ToastProvider>
         </ThemeProvider>
       </body>
     </html>

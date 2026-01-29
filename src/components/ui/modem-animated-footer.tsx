@@ -5,6 +5,7 @@ import {
     NotepadTextDashed,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { FooterContactForm } from "@/components/footer-contact-form";
 
 interface FooterLink {
     label: string;
@@ -45,12 +46,11 @@ export const ModemFooter = ({
                     <div className="flex flex-col mb-6 w-full">
                         <div className="w-full flex flex-col items-center">
                             {/* Email Address */}
-                            <a
-                                href="mailto:founder@hireoo.ai"
-                                className="text-muted-foreground hover:text-foreground transition-colors text-base sm:text-lg mb-4 text-center"
-                            >
-                                Write to us at <span className="text-foreground font-medium">founder@hireoo.ai</span> - we respond within 24 hours
-                            </a>
+                            {/* Contact Form */}
+                            <div className="w-full max-w-md mx-auto mb-10">
+                                <h3 className="text-xl font-semibold text-white mb-4 text-center">Get in touch</h3>
+                                <FooterContactForm />
+                            </div>
 
                             {socialLinks.length > 0 && (
                                 <div className="flex mb-4 gap-4">
