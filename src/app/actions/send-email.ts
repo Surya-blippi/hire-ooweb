@@ -53,6 +53,7 @@ export async function sendContactEmail(formData: FormData) {
         });
 
         return { success: true, data };
+    } catch (error) {
         return { success: false, error };
     }
 }
