@@ -98,8 +98,8 @@ export function Hero() {
                         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
                         className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-white mb-8 drop-shadow-2xl"
                     >
-                        Talent, <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-white/50">Elevated.</span>
+                        Global Hiring, <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-white/50">Done Right.</span>
                     </motion.h1>
 
                     <motion.p
@@ -108,7 +108,7 @@ export function Hero() {
                         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
                         className="text-lg md:text-xl text-zinc-300 mb-12 max-w-xl mx-auto leading-relaxed font-light"
                     >
-                        The operating system for elite engineering teams. Access pre-vetted talent with the precision of AI and the nuance of human expertise.
+                        AI precision with human judgment.
                     </motion.p>
 
                     <motion.div
@@ -117,8 +117,11 @@ export function Hero() {
                         transition={{ duration: 1, delay: 0.3 }}
                         className="flex flex-col sm:flex-row items-center justify-center gap-4"
                     >
-                        <Button size="lg" disabled className="bg-white/10 text-white border border-white/5 hover:bg-white/20 rounded-full px-10 h-14 text-base font-semibold cursor-not-allowed backdrop-blur-md transition-all">
-                            Launching Soon
+                        <Button size="lg" className="bg-white text-black hover:bg-white/90 rounded-full px-10 h-14 text-base font-semibold backdrop-blur-md transition-all">
+                            Hire a Talent
+                        </Button>
+                        <Button size="lg" className="bg-white/10 text-white border border-white/5 hover:bg-white/20 rounded-full px-10 h-14 text-base font-semibold backdrop-blur-md transition-all">
+                            Find a job
                         </Button>
                     </motion.div>
                 </div>
