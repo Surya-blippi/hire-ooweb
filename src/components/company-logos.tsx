@@ -33,7 +33,7 @@ export function CompanyLogos() {
             {[...logos, ...logos].map((logo, index) => (
               <div
                 key={`${logo}-${index}`}
-                className="flex items-center justify-center min-w-[140px] h-20 relative grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 transform hover:scale-110 cursor-pointer"
+                className="flex items-center justify-center min-w-[140px] h-20 relative transition-all duration-300 transform hover:scale-110 cursor-pointer"
               >
                 <Image
                   src={`/Logos/${logo}`}
